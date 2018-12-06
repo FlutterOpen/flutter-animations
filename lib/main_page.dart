@@ -23,6 +23,7 @@ class _MainState extends State<MainPage> {
       case PageType.Other:
         return OtherPage();
     }
+    return HomePage();
   }
 
   BottomNavigationBarItem _barItem(PageType type) {
