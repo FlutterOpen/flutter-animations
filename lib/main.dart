@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.green,
         ),
-        home: MainPage(),
+        home: WelcomePage(),
         routes: {
+          MAIN_PAGE: (BuildContext context) => MainPage(),
           HOME_CHILD_PAGE_NAMES[0]: (BuildContext context) => ScrollViewPage(),
         });
   }

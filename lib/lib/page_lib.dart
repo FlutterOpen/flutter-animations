@@ -12,6 +12,7 @@ export "../page/HomePage.dart";
 export '../page/OtherPage.dart';
 export '../page/ThemePage.dart';
 export '../page/scroll/ScrollViewPage.dart';
+export '../page/WelcomePage.dart';
 
 enum PageType { Home, Other }
 

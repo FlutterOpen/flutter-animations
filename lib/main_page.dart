@@ -7,7 +7,7 @@
 import "package:flutter/material.dart";
 import 'package:flutter_layouts_higher/lib/page_lib.dart';
 import 'package:flutter_layouts_higher/lib/constant_lib.dart';
-
+import 'package:flutter_layouts_higher/lib/view_lib.dart';
 class MainPage extends StatefulWidget {
   @override
   _MainState createState() => _MainState();
@@ -64,6 +64,10 @@ class _MainState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+//      appBar: MainAppBar(
+//        titleColor: Colors.white,
+//        titleText: MAIN_PAGE,
+//      ),
       body: _body(),
       bottomNavigationBar: BottomNavigationBar(
         items: _barItems(),
