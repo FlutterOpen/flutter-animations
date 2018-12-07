@@ -6,6 +6,7 @@
 import "package:flutter/material.dart";
 import 'package:flutter_layouts_higher/lib/view_lib.dart';
 import 'package:flutter_layouts_higher/lib/constant_lib.dart';
+import 'package:flutter_layouts_higher/data/main_data.dart';
 
 class ScrollViewPage extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _ScrollViewState extends State<ScrollViewPage> {
     m.values.toList();
     return Scaffold(
       appBar: MainAppBar(
-        titleText: HOME_CHILD_PAGE_NAMES[0],
+        titleText: HOME_CHILD_PAGE_NAMES[HomePageType.ScrollView.index],
         titleColor: Colors.white,
       ),
       body: Text("Other"),

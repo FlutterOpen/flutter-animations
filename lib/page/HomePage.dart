@@ -8,18 +8,6 @@ import 'package:flutter_layouts_higher/lib/view_lib.dart';
 import 'package:flutter_layouts_higher/lib/page_lib.dart';
 import 'package:flutter_layouts_higher/lib/constant_lib.dart';
 
-enum ChildPageType {
-  ScrollView,
-}
-
-ChildPageType convertChildType(int type) {
-  for (var t in ChildPageType.values) {
-    if (t.index == type) {
-      return t;
-    }
-    return ChildPageType.ScrollView;
-  }
-}
 
 class HomePage extends StatefulWidget {
   @override

@@ -7,7 +7,7 @@
 const THEME_PAGE = "theme_page/";
 const MAIN_PAGE = "main_page";
 const HOME_CHILD_PAGE_NAMES = [
-  "SliverGrid",
+  "GridView",
   "SliverGrid2",
   "SliverGrid",
   "SliverGrid",
