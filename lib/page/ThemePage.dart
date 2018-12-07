@@ -1,27 +1,29 @@
 ///
-/// Created by NieBin on 18-12-6
+/// Created by NieBin on 18-12-7
 /// Github: https://github.com/nb312
 /// Email: niebin312@gmail.com
 ///
+
 import "package:flutter/material.dart";
 import 'package:flutter_layouts_higher/lib/view_lib.dart';
+import '../main.dart';
+class ThemePage extends StatefulWidget {
 
-class OtherPage extends StatefulWidget {
+  ThemePage();
+
   @override
-  _OtherState createState() => _OtherState();
+  _ThemeState createState() => _ThemeState();
 }
 
-class _OtherState extends State<OtherPage> {
+class _ThemeState extends State<ThemePage> {
   @override
   Widget build(BuildContext context) {
-    Map<String, String> m = {"S": "S"};
-    m.values.toList();
     return Scaffold(
       appBar: MainAppBar(
-        titleText: "Other",
+        titleText: "Theme Select",
         titleColor: Colors.white,
       ),
-      body: Text("Other"),
+      body: Text("Theme Select"),
     );
   }
 }

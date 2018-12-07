@@ -5,8 +5,8 @@
 ///
 
 import "package:flutter/material.dart";
-import 'package:flutter_layouts_higher/page/page_lib.dart';
-import 'package:flutter_layouts_higher/constant/constant_lib.dart';
+import 'package:flutter_layouts_higher/lib/page_lib.dart';
+import 'package:flutter_layouts_higher/lib/constant_lib.dart';
 
 class MainPage extends StatefulWidget {
   @override

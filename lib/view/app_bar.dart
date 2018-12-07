@@ -4,7 +4,7 @@
 /// Email: niebin312@gmail.com
 ///
 import "package:flutter/material.dart";
-import 'package:flutter_layouts_higher/constant/constant_lib.dart';
+import 'package:flutter_layouts_higher/lib/constant_lib.dart';
 
 class MainAppBar extends AppBar {
   MainAppBar({
@@ -29,7 +29,9 @@ class MainAppBar extends AppBar {
                     child: bottomWidget,
                     preferredSize: Size(0.0, bottomHeight),
                   ),
-            actions: rightWidget == null ? null : [rightWidget]);
+            actions: rightWidget == null ? null : [rightWidget],
+            elevation: 1.0);
+
   final String titleText;
   final Color titleColor;
   final Widget rightWidget;

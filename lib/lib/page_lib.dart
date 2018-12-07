@@ -8,8 +8,10 @@ library page;
 
 import 'package:flutter/material.dart';
 
-export "HomePage.dart";
-export 'OtherPage.dart';
+export "../page/HomePage.dart";
+export '../page/OtherPage.dart';
+export '../page/ThemePage.dart';
+export '../page/scroll/ScrollViewPage.dart';
 
 enum PageType { Home, Other }
 

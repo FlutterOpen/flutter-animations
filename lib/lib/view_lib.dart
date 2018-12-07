@@ -4,7 +4,6 @@
 /// Email: niebin312@gmail.com
 ///
 
-library constant;
+library view;
 
-export 'size_const.dart';
-export 'color_const.dart';
+export '../view/app_bar.dart';
