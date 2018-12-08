@@ -32,7 +32,7 @@ class _WelcomeState extends State<WelcomePage>
       ..addStatusListener((status) {
         if (AnimationStatus.completed == status ||
             AnimationStatus.dismissed == status) {
-//          Navigator.of(context).pushReplacementNamed(MAIN_PAGE);
+          Navigator.of(context).pushReplacementNamed(MAIN_PAGE);
         }
       });
     controller.forward();
