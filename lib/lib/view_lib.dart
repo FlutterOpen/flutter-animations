@@ -7,3 +7,5 @@
 library view;
 
 export '../view/app_bar.dart';
+export '../view/star_view.dart';
+

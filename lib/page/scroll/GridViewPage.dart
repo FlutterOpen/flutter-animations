@@ -9,6 +9,8 @@ import 'package:flutter_layouts_higher/data/main_data.dart';
 import 'package:flutter_layouts_higher/lib/constant_lib.dart';
 import 'package:flutter_layouts_higher/data/move_data.dart';
 
+import 'GridViewDetailPage.dart';
+
 const RELEASE_DATE = "RELEASE DATE", RUNTIME = "RUMTIME";
 
 class GridViewPage extends StatefulWidget {
@@ -45,50 +47,6 @@ class _GridState extends State<GridViewPage> {
     );
   }
 
-  //The total star is 5 and the total score is 10.
-  Widget _star(double rating) {
-    int num = rating ~/ 2; //the entire star
-    bool isHalf = (rating - num * 2) > 1.0; // half star
-    List<Widget> stars = List();
-    var line = SizedBox(
-      width: 0.0,
-    );
-    var size = 20.0;
-    for (int n = 0; n < num; n++) {
-      stars.add(
-        Icon(
-          Icons.star,
-          color: Colors.deepOrange,
-          size: size,
-        ),
-      );
-      stars.add(line);
-    }
-    if (isHalf) {
-      stars.add(Icon(
-        Icons.star_half,
-        color: Colors.deepOrange,
-        size: size,
-      ));
-      stars.add(line);
-    }
-    int surplus = num + (isHalf ? 1 : 0);
-    surplus = 5 - surplus;
-    for (int n = 0; n < surplus; n++) {
-      stars.add(
-        Icon(
-          Icons.star_border,
-          color: Colors.deepOrange,
-          size: size,
-        ),
-      );
-      stars.add(line);
-    }
-    return Row(
-      children: stars,
-    );
-  }
-
   Widget _cardBottom(MoveItem item) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -113,7 +71,7 @@ class _GridState extends State<GridViewPage> {
               fontSize: TEXT_SIZE_SMALL),
         ),
         SizedBox(height: 1.0),
-        _star(item.rating),
+        countStar(item.rating),
         SizedBox(height: 2.0),
         Row(
           children: <Widget>[
@@ -128,7 +86,12 @@ class _GridState extends State<GridViewPage> {
 
   Widget _grdItem(MoveItem item) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => GridViewDetailPage(item: item)));
+      },
       child: Card(
         elevation: 1.0,
         shape: RoundedRectangleBorder(
