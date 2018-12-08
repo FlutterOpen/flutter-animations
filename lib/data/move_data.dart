@@ -7,7 +7,7 @@
 import 'package:meta/meta.dart';
 //import "package:flutter/material.dart";
 
-class Item {
+class MoveItem {
   int id;
   String name;
   String category;
@@ -23,7 +23,7 @@ class Item {
   String trailerImg2;
   String trailerImg3;
 
-  Item({
+  MoveItem({
     @required this.id,
     @required this.name,
     @required this.category,
@@ -41,9 +41,9 @@ class Item {
   });
 }
 
-List<Item> getItemList() {
+List<MoveItem> getItemList() {
   return [
-    Item(
+    MoveItem(
       id: 0,
       name: 'Avengers: Infinity War',
       category: 'Action, Adventure, Fantasy',
@@ -66,7 +66,7 @@ List<Item> getItemList() {
       trailerImg2: 'assets/images/ic_thumb_12.png',
       trailerImg3: 'assets/images/ic_thumb_13.png',
     ),
-    Item(
+    MoveItem(
       id: 1,
       name: 'Transformers: The Last Knight',
       category: 'Action, Adventure, Sci-Fi',
@@ -85,7 +85,7 @@ List<Item> getItemList() {
       trailerImg2: 'assets/images/ic_thumb_21.png',
       trailerImg3: 'assets/images/ic_thumb_21.png',
     ),
-    Item(
+    MoveItem(
       id: 2,
       name: 'Pacific Rim: Uprising',
       category: 'Action, Adventure, Sci-Fi',
@@ -103,8 +103,65 @@ List<Item> getItemList() {
       trailerImg2: 'assets/images/ic_thumb_31.png',
       trailerImg3: 'assets/images/ic_thumb_31.png',
     ),
-    Item(
+    MoveItem(
       id: 3,
+      name: 'Thor: Ragnarok',
+      category: 'Action, Adventure, Comedy',
+      desc: 'Thor is imprisoned on the planet Sakaar, and must '
+          'race against time to return to Asgard and stop Ragnarök, '
+          'the destruction of his world, at the hands of the powerful '
+          'and ruthless villain Hela.',
+      rating: 7.9,
+      directors: 'Directors: Taika Waititi',
+      releaseDate: '3 November 2017',
+      releaseDateDesc: 'USA (2017), 2h 10min',
+      runtime: '2h 10min',
+      bannerUrl: 'assets/images/movie_banner_4.png',
+      imageUrl: 'assets/images/ic_preview_4.png',
+      trailerImg1: 'assets/images/ic_thumb_41.png',
+      trailerImg2: 'assets/images/ic_thumb_41.png',
+      trailerImg3: 'assets/images/ic_thumb_41.png',
+    ),
+    MoveItem(
+      id: 4,
+      name: 'Thor: Ragnarok',
+      category: 'Action, Adventure, Comedy',
+      desc: 'Thor is imprisoned on the planet Sakaar, and must '
+          'race against time to return to Asgard and stop Ragnarök, '
+          'the destruction of his world, at the hands of the powerful '
+          'and ruthless villain Hela.',
+      rating: 7.9,
+      directors: 'Directors: Taika Waititi',
+      releaseDate: '3 November 2017',
+      releaseDateDesc: 'USA (2017), 2h 10min',
+      runtime: '2h 10min',
+      bannerUrl: 'assets/images/movie_banner_4.png',
+      imageUrl: 'assets/images/ic_preview_4.png',
+      trailerImg1: 'assets/images/ic_thumb_41.png',
+      trailerImg2: 'assets/images/ic_thumb_41.png',
+      trailerImg3: 'assets/images/ic_thumb_41.png',
+    ),
+    MoveItem(
+      id: 5,
+      name: 'Thor: Ragnarok',
+      category: 'Action, Adventure, Comedy',
+      desc: 'Thor is imprisoned on the planet Sakaar, and must '
+          'race against time to return to Asgard and stop Ragnarök, '
+          'the destruction of his world, at the hands of the powerful '
+          'and ruthless villain Hela.',
+      rating: 7.9,
+      directors: 'Directors: Taika Waititi',
+      releaseDate: '3 November 2017',
+      releaseDateDesc: 'USA (2017), 2h 10min',
+      runtime: '2h 10min',
+      bannerUrl: 'assets/images/movie_banner_4.png',
+      imageUrl: 'assets/images/ic_preview_4.png',
+      trailerImg1: 'assets/images/ic_thumb_41.png',
+      trailerImg2: 'assets/images/ic_thumb_41.png',
+      trailerImg3: 'assets/images/ic_thumb_41.png',
+    ),
+    MoveItem(
+      id: 6,
       name: 'Thor: Ragnarok',
       category: 'Action, Adventure, Comedy',
       desc: 'Thor is imprisoned on the planet Sakaar, and must '
