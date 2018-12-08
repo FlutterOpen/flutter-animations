@@ -8,7 +8,6 @@ import 'package:flutter_layouts_higher/lib/view_lib.dart';
 import 'package:flutter_layouts_higher/lib/page_lib.dart';
 import 'package:flutter_layouts_higher/lib/constant_lib.dart';
 
-
 class HomePage extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -18,7 +17,7 @@ class _HomeState extends State<HomePage> {
   Widget _item(index) {
     return InkWell(
       child: Container(
-        color: Colors.grey,
+        color: Colors.grey[(index % 5 + 5) * 100],
         margin: EdgeInsets.only(bottom: 5.0),
         child: SizedBox(
             height: 50.0,
@@ -26,7 +25,7 @@ class _HomeState extends State<HomePage> {
               child: Text(
                 HOME_CHILD_PAGE_NAMES[index],
                 style: TextStyle(
-                  color: Colors.brown,
+                  color: Colors.white,
                   fontSize: TEXT_SIZE_NORMAL,
                 ),
               ),
@@ -41,11 +40,13 @@ class _HomeState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: MainAppBar(
-          titleText: PAGE_TITLES[PageType.Home.index],
-          titleColor: Colors.white,
-        ),
-        body: CustomScrollView(
+      appBar: MainAppBar(
+        titleText: PAGE_TITLES[PageType.Home.index],
+        titleColor: Colors.white,
+      ),
+      body: Container(
+        padding: EdgeInsets.only(top: 10.0),
+        child: CustomScrollView(
           slivers: <Widget>[
             SliverGrid(
               gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
@@ -62,6 +63,8 @@ class _HomeState extends State<HomePage> {
               ),
             ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }

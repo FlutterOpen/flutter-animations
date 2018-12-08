@@ -8,6 +8,7 @@ import "package:flutter/material.dart";
 import 'package:flutter_layouts_higher/lib/page_lib.dart';
 import 'package:flutter_layouts_higher/lib/constant_lib.dart';
 import 'package:flutter_layouts_higher/lib/view_lib.dart';
+
 class MainPage extends StatefulWidget {
   @override
   _MainState createState() => _MainState();
@@ -27,7 +28,9 @@ class _MainState extends State<MainPage> {
   }
 
   BottomNavigationBarItem _barItem(PageType type) {
-    var color = type == curType ? BOTTOM_ITEM_COLORS[0] : BOTTOM_ITEM_COLORS[1];
+    var color = type == curType
+        ? BOTTOM_COLORS[COLOR_LIGHT_INDEX]
+        : BOTTOM_COLORS[COLOR_DARK_INDEX];
     return BottomNavigationBarItem(
         title: Text(
           PAGE_TITLES[type.index],

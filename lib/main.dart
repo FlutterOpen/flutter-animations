@@ -10,9 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Layout Higher',
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-        ),
+        theme: ThemeData(primaryColor: BOTTOM_COLORS[COLOR_LIGHT_INDEX]),
         home: WelcomePage(),
         routes: {
           MAIN_PAGE: (BuildContext context) => MainPage(),

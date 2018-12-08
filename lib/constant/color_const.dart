@@ -5,4 +5,6 @@
 ///
 import "package:flutter/material.dart";
 
-const BOTTOM_ITEM_COLORS = [Colors.green, Colors.grey];
+const BOTTOM_COLORS = Colors.grey;
+const COLOR_LIGHT_INDEX = 900;
+const COLOR_DARK_INDEX = 500;
