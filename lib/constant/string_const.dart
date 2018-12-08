@@ -28,3 +28,18 @@ const HOME_CHILD_PAGE_NAMES = [
   "SliverGrid",
   "SliverGrid",
 ];
+
+
+enum HomePageType {
+  GridView,
+  ScrollView,
+}
+
+HomePageType convertChildType(int type) {
+  for (var t in HomePageType.values) {
+    if (t.index == type) {
+      return t;
+    }
+    return HomePageType.ScrollView;
+  }
+}

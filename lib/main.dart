@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
         home: WelcomePage(),
         routes: {
           MAIN_PAGE: (BuildContext context) => MainPage(),
-          HOME_CHILD_PAGE_NAMES[0]: (BuildContext context) => ScrollViewPage(),
+          HOME_CHILD_PAGE_NAMES[HomePageType.ScrollView.index]:
+              (BuildContext context) => ScrollViewPage(),
+          HOME_CHILD_PAGE_NAMES[HomePageType.GridView.index]:
+              (BuildContext context) => GridViewPage(),
         });
   }
 }
