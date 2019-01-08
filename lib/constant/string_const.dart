@@ -9,7 +9,7 @@ const MAIN_PAGE = "main_page";
 const HOME_CHILD_PAGE_NAMES = [
   "GridView",
   "SliverGrid2",
-  "SliverGrid",
+  "Gesture",
   "SliverGrid",
   "SliverGrid",
   "SliverGrid",
@@ -29,10 +29,10 @@ const HOME_CHILD_PAGE_NAMES = [
   "SliverGrid",
 ];
 
-
 enum HomePageType {
   GridView,
   ScrollView,
+  Gesture,
 }
 
 HomePageType convertChildType(int type) {
@@ -40,6 +40,6 @@ HomePageType convertChildType(int type) {
     if (t.index == type) {
       return t;
     }
-    return HomePageType.ScrollView;
   }
+  return HomePageType.ScrollView;
 }

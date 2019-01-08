@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'main_page.dart';
 import 'package:flutter_layouts_higher/lib/constant_lib.dart';
 import 'package:flutter_layouts_higher/lib/page_lib.dart';
+import 'package:flutter_layouts_higher/page/gesture/GesturePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +19,8 @@ class MyApp extends StatelessWidget {
               (BuildContext context) => ScrollViewPage(),
           HOME_CHILD_PAGE_NAMES[HomePageType.GridView.index]:
               (BuildContext context) => GridViewPage(),
+          HOME_CHILD_PAGE_NAMES[HomePageType.Gesture.index]:
+              (BuildContext context) => GesturePage(),
         });
   }
 }

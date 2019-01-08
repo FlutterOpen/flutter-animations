@@ -5,7 +5,6 @@
 ///
 import "package:flutter/material.dart";
 import 'package:flutter_layouts_higher/lib/view_lib.dart';
-import 'package:flarelib/flare_actor.dart';
 
 class OtherPage extends StatefulWidget {
   @override
@@ -22,10 +21,22 @@ class _OtherState extends State<OtherPage> {
         titleText: "Other",
         titleColor: Colors.white,
       ),
+//      body: Container(
+//        child: FlareActor(
+//          "assets/images/man.flr",
+//          animation: "Build and Fade Out",
+//        ),
+//      ),
       body: Container(
-        child: FlareActor(
-          "assets/images/man.flr",
-          animation: "Build and Fade Out",
+        width: 200.0,
+        height: 200.0,
+        color: Colors.red,
+        child: GestureDetector(
+          onTapDown: (position) {
+            print(
+                "x:${position.globalPosition.dx}, y: ${position.globalPosition.dy}");
+          },
+          onVerticalDragUpdate: (detail){},
         ),
       ),
     );
