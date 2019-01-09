@@ -1,4 +1,7 @@
 # flutter-animation
+Facebook Page | Facebook Group | QQ Group | Developer |
+--- | --- | --- | ---
+[Flutter Open ](https://www.facebook.com/flutteropen) | [Flutter Open](https://www.facebook.com/groups/948618338674126/) |  963828159 |[NieBin](https://github.com/nb312)
 
 A  Flutter application about advanced layout.
 
