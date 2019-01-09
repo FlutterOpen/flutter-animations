@@ -1,17 +1,11 @@
 # flutter-animation
+### :heart: Star :heart: the repo to support the project or :smile:[Follow Me](https://github.com/nb312).Thanks!
 Facebook Page | Facebook Group | QQ Group | Developer |
 --- | --- | --- | ---
 [Flutter Open ](https://www.facebook.com/flutteropen) | [Flutter Open](https://www.facebook.com/groups/948618338674126/) |  963828159 |[NieBin](https://github.com/nb312)
 
-A  Flutter application about advanced layout.
+This project will focus on animations.
 
-- Animation
-- Flare_flutter Animtion  
-- GirdView
-- ListView
-- Stack   
-
-<img src="./screen_shot/welcome_screen.png" width="200"><img src="./screen_shot/flare_animation.png" width="200"><img src="./screen_shot/widget_screen.png" width="200">
-<img src="./screen_shot/grid_view_screen.png" width="300"> <img src="./screen_shot/grid_view_detail_screen.png" width="300">
-
-[grid view: picture and text come from ](https://github.com/flutter-devs/flutter_gridview_demo)  
+Articles | Pictures
+--- | --- 
+[Animation 01 How to use the animation in the flutter?](https://medium.com/flutteropen/animation-01-how-to-use-the-animation-in-the-flutter-e3ef7043f940) | <img src="doc/animation_01.gif" height="320" />
