@@ -3,7 +3,7 @@ Facebook Page | Facebook Group | QQ Group | Developer |
 --- | --- | --- | ---
 [Flutter Open ](https://www.facebook.com/flutteropen) | [Flutter Open](https://www.facebook.com/groups/948618338674126/) |  963828159 |[NieBin](https://github.com/nb312)
 
-# flutter-animation
+# flutter-animations
 This project will focus on animations.
 
 Articles | Pictures
