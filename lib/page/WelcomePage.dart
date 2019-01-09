@@ -1,12 +1,11 @@
 ///
-/// Created by NieBin on 18-12-7
+/// Created by NieBin on 2019/1/9
 /// Github: https://github.com/nb312
 /// Email: niebin312@gmail.com
 ///
 import "package:flutter/material.dart";
-import 'package:flutter_layouts_higher/lib/constant_lib.dart';
-
-const APP_NAME = ["Flutter", "Widgets"];
+import 'package:flutter_animation/constant/image_const.dart';
+import 'dart:math';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -15,103 +14,74 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomeState extends State<WelcomePage>
     with SingleTickerProviderStateMixin {
-  AnimationController controller;
-  Animation<double> animation;
+  AnimationController _controller;
+  Animation<double> _animation;
 
+  @override
   void initState() {
     super.initState();
-    controller = AnimationController(
-        duration: const Duration(seconds: 2),
-        vsync: this,
-        animationBehavior: AnimationBehavior.preserve);
-    animation = Tween(begin: 100.0, end: 300.0).animate(controller)
+    _controller =
+        AnimationController(duration: const Duration(seconds: 2), vsync: this);
+    _animation = Tween(begin: 0.0, end: 200.0).animate(_controller)
       ..addListener(() {
+        print("listener");
         setState(() {});
-        print("value:${animation.value}");
       })
-      ..addStatusListener((status) {
-        if (AnimationStatus.completed == status ||
-            AnimationStatus.dismissed == status) {
-          Navigator.of(context).pushReplacementNamed(MAIN_PAGE);
+      ..addStatusListener((state) {
+        if (state == AnimationStatus.completed) {
+          print("complete");
+          _controller.forward();
         }
       });
-    controller.forward();
-  }
-
-  TextSpan _nameSpan(String name, Color color) {
-    return TextSpan(
-      text: name,
-      style: TextStyle(
-        color: color,
-        fontSize: TEXT_SIZE_LARGE,
-        fontWeight: FontWeight.w700,
-        wordSpacing: 5.0,
-        shadows: [
-          Shadow(color: Colors.grey[700], offset: Offset(0.0, 2.0)),
-        ],
-      ),
-    );
+    _controller.forward();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Flutter Open"),
+      ),
       body: Container(
-        constraints: BoxConstraints.expand(),
-        color: Colors.grey[800],
-        child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 50.0),
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Center(
-                      child: SizedBox(
-                        width: animation.value,
-                        height: animation.value,
-                        child: Container(
-                          child: Stack(
-                            fit: StackFit.expand,
-                            children: <Widget>[
-                              FlutterLogo(
-                                colors: Colors.amber,
-                                style: FlutterLogoStyle.horizontal,
-                                textColor: Colors.amber,
-                              ),
-                              Positioned(
-                                  left: 4.0,
-                                  top: 4.0,
-                                  child: SizedBox(
-                                    width: animation.value - 8.0,
-                                    height: animation.value - 8.0,
-                                    child: FlutterLogo(
-                                      colors: Colors.deepOrange,
-                                      style: FlutterLogoStyle.horizontal,
-                                      textColor: Colors.deepOrange,
-                                    ),
-                                  ))
-                            ],
-                          ),
-                        ),
-                      ),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 6,
+              child: Container(
+                alignment: AlignmentDirectional.center,
+                child: Container(
+                  margin: EdgeInsets.only(top: 50.0),
+                  child: Transform.rotate(
+                    angle: -_animation.value * 2 * pi / 200,
+                    child: Image.asset(
+                      ImagePath.FLUTTER_OPEN,
+                      fit: BoxFit.fitHeight,
+                      width: _animation.value,
+                      height: _animation.value,
                     ),
                   ),
-                  Text.rich(
-                    TextSpan(style: TextStyle(wordSpacing: 5.0), children: [
-                      _nameSpan(APP_NAME[0], BOTTOM_COLORS[COLOR_LIGHT_INDEX]),
-                      _nameSpan(" ${APP_NAME[1]}", Colors.deepOrange),
-                    ]),
-                  ),
-                ],
+                ),
               ),
-            )),
+            ),
+            Expanded(
+                flex: 1,
+                child: Center(
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      _controller..repeat();
+                    },
+                    child: Icon(Icons.refresh),
+                  ),
+                ))
+          ],
+        ),
       ),
     );
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    _controller.dispose();
     super.dispose();
   }
 }
