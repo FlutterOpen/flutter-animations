@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Layout Higher',
+      title: 'Layout Animation',
       home: WelcomePage(),
       routes: {},
     );
