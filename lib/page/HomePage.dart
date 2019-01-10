@@ -42,12 +42,14 @@ class _HomeState extends State<HomePage> {
             color: ITEM_COLORS[index % ITEM_COLORS.length].withOpacity(0.9),
             child: Stack(
               children: <Widget>[
-                Center(
-                  child: Image.asset(
-                    PAGES[index % PAGES.length]["img"],
-                    fit: BoxFit.cover,
+                Container(
+                  child: Center(
+                    child: Image.asset(
+                      PAGES[index % PAGES.length]["img"],
+                      fit: BoxFit.fitWidth,
+                    ),
                   ),
-                ),
+                )
               ],
             ),
           ),
@@ -64,15 +66,16 @@ class _HomeState extends State<HomePage> {
         title: Text("Flutter Open"),
       ),
       body: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 1.2,
-            crossAxisSpacing: 10.0,
-            mainAxisSpacing: 10.0,
-          ),
-          itemBuilder: (context, index) {
-            return _listItem(index);
-          }),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 1,
+            childAspectRatio: 1,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10),
+        itemBuilder: (context, index) {
+          return _listItem(index);
+        },
+        itemCount: PAGES.length,
+      ),
     );
   }
 }

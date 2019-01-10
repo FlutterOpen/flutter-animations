@@ -6,3 +6,4 @@
 export "HomePage.dart";
 export "WelcomePage.dart";
 export 'package:flutter_animation/page/animation01/AnimationOnePage.dart';
+export 'package:flutter_animation/page/animation02/FlarePage.dart';

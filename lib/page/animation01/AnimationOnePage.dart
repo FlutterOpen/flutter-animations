@@ -7,6 +7,7 @@ import "package:flutter/material.dart";
 import 'package:flutter_animation/constant/_constant.dart';
 import 'dart:math';
 
+///tutorial: https://medium.com/flutteropen/animation-01-how-to-use-the-animation-in-the-flutter-e3ef7043f940
 class AnimationOnePage extends StatefulWidget {
   @override
   _OneState createState() => _OneState();

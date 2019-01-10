@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       routes: {
         PageConst.HOME_PAGE: (context) => HomePage(),
         PageConst.ANIMATION_01: (context) => AnimationOnePage(),
-        PageConst.ANIMATION_02: (context) => AnimationOnePage(),
+        PageConst.ANIMATION_02: (context) => FlarePage(),
       },
     );
   }
