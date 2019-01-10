@@ -7,12 +7,13 @@ import "package:flutter/material.dart";
 import 'package:flutter_animation/constant/_constant.dart';
 import 'dart:math';
 
-class WelcomePage extends StatefulWidget {
+///tutorial: https://medium.com/flutteropen/animation-01-how-to-use-the-animation-in-the-flutter-e3ef7043f940
+class AnimationOnePage extends StatefulWidget {
   @override
-  _WelcomeState createState() => _WelcomeState();
+  _OneState createState() => _OneState();
 }
 
-class _WelcomeState extends State<WelcomePage>
+class _OneState extends State<AnimationOnePage>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> _animation;
@@ -22,7 +23,7 @@ class _WelcomeState extends State<WelcomePage>
     super.initState();
     _controller =
         AnimationController(duration: const Duration(seconds: 3), vsync: this);
-    _animation = Tween(begin: 0.0, end: 200.0).animate(_controller)
+    _animation = Tween(begin: 50.0, end: 200.0).animate(_controller)
       ..addListener(() {
         setState(() {});
       })
@@ -38,7 +39,7 @@ class _WelcomeState extends State<WelcomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter Open"),
+        title: Text("Animation Tutorial 01"),
       ),
       body: Container(
         child: Column(
@@ -66,10 +67,9 @@ class _WelcomeState extends State<WelcomePage>
                 child: Center(
                   child: FloatingActionButton(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(
-                          context, PageConst.HOME_PAGE);
+                      _controller.repeat();
                     },
-                    child: Icon(Icons.forward),
+                    child: Icon(Icons.refresh),
                   ),
                 ))
           ],
